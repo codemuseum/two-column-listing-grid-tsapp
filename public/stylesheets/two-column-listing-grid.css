@@ -1,0 +1,22 @@
+.app-two-column-listing-grid h2 {text-align:center; margin:0; padding:0; padding-top:15px;padding-bottom:8px;}
+
+.app-two-column-listing-grid .column {width:50%; float:left;}
+
+.app-two-column-listing-grid .listing { position: relative; }
+.app-two-column-listing-grid .listing { width:95%; margin-right: auto; margin-left: auto; }
+.app-two-column-listing-grid .listing a { display: block; text-decoration: none; padding: 10px 12px 16px 10px; margin-bottom: 20px;}
+.app-two-column-listing-grid .listing a .img { float: left; text-align: center; width: 100px; }
+.app-two-column-listing-grid .listing a .img img { width: 100px; border:0px; }
+
+.app-two-column-listing-grid .listing a .name,
+.app-two-column-listing-grid .listing a .description { margin-left: 112px; }
+.app-two-column-listing-grid .listing a .name { margin-top: 5px; text-decoration: underline; font-size: 130%; }
+
+.app-two-column-listing-grid .clearfix {clear: both;visibility: hidden;font-size: 1px;line-height: 1px;}
+
+
+/* fixes problems with ie HasLayout - record-link elements were peek-a-booing */
+*:first-child+html .app-two-column-listing-grid .listing,
+*:first-child+html .app-two-column-listing-grid .listing a { zoom: 1; }
+* html .app-two-column-listing-grid .listing,
+* html .app-two-column-listing-grid .listing a { zoom: 1; }

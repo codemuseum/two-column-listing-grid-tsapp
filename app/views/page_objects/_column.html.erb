@@ -1,0 +1,6 @@
+<%# Takes full_listings, column_name %>
+<div class="column <%=h column_name %>">
+  <% full_listings.each do |listing| %>
+    <%= render :partial => 'page_objects/listing', :locals => { :listing => listing } %>
+  <% end %>
+</div>

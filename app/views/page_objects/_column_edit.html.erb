@@ -1,0 +1,8 @@
+<%# Takes f, full_listings or column_name %>
+<div class="column <%=h column_name %>" id="two_column_listing_grid_column_<%= column_name %>">
+  <%= f.hidden_field "piped_#{column_name}_listings", :class => 'piped-listings-value' %>
+
+  <% full_listings.each do |listing| %>
+    <%= render :partial => 'listing', :locals => { :listing => listing } %>
+  <% end %>
+</div>

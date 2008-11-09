@@ -1,0 +1,18 @@
+<% stylesheets 'two-column-listing-grid' -%>
+<% # javascripts 'prototype', 'effects', 'dragdrop', 'assets' %>
+
+<h2><%=h @page_object.header %></h2>
+
+<div class="columns">
+  <%= render :partial => 'column', :locals => { 
+      :full_listings => @page_object.full_left_listings + @page_object.full_ungrouped_listings,
+      :column_name => 'left' } 
+  %>
+  
+  <%= render :partial => 'column', :locals => { 
+      :full_listings => @page_object.full_right_listings,
+      :column_name => 'right' } 
+  %>
+</div>
+
+<div class="clearfix">&nbsp;</div>

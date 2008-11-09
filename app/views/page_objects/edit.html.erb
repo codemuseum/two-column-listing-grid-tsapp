@@ -1,0 +1,50 @@
+<% stylesheets 'two-column-listing-grid', 'two-column-listing-grid-edit' -%>
+<% javascripts 'prototype', 'effects', 'dragdrop', 'two-column-listing-grid-edit' %>
+
+<% fields_for_page_object do |f| %>
+
+  <h2>
+    <%= f.label :header %>
+    <%= f.text_field :header %>
+  </h2>
+  
+  <div class="datapath">
+    <%= f.label :data_path, 'Search for (data path):' %>
+    <span class="readonly">
+      <%=h f.object.data_path %>
+      <a class='button'>change</a>
+    </span>
+    <span class="editable hidden">
+      <%= f.text_field :data_path %>
+    </span>
+  </div>
+  
+  <div class="functions">
+    <%= link_to_new_page "New #{f.object.data_path.blank? ? 'Page' : f.object.data_path.singularize.titleize}...", 
+          { :representing => f.object.data_path.blank? ? nil : f.object.data_path.singularize }, { :class => 'button new-page' } %>
+  </div>
+  
+  <div class="columns" id="two_column_listing_grid_<%= @page_object.urn %>">
+    <%= render :partial => 'column_edit', :locals => { 
+        :f => f,
+        :full_listings => @page_object.full_left_listings + @page_object.full_ungrouped_listings,
+        :column_name => 'left' } 
+    %>
+
+    <%= render :partial => 'column_edit', :locals => { 
+        :f => f,
+        :full_listings => @page_object.full_right_listings,
+        :column_name => 'right' } 
+    %>
+  </div>
+  
+
+  <div class="clearfix">&nbsp;</div>
+  
+  
+  <div class="functions">
+    <%= link_to_new_page "New #{f.object.data_path.blank? ? 'Page' : f.object.data_path.singularize.titleize}...", 
+          { :representing => f.object.data_path.blank? ? nil : f.object.data_path.singularize  }, { :class => 'button new-page' } %>
+  </div>
+
+<% end %>

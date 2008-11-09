@@ -1,0 +1,10 @@
+.app-two-column-listing-grid h2 label {font-weight:normal; display:block; font-size:65%;}
+.app-two-column-listing-grid h2 input {font-size:100%; width:80%; text-align:center;}
+
+.app-two-column-listing-grid .functions,
+.app-two-column-listing-grid .datapath {text-align:right; margin:10px;}
+.app-two-column-listing-grid a.button { cursor:pointer; border:1px solid #aaa; -moz-border-radius: 5px; -webkit-border-radius: 5px; padding:2px 5px; }
+
+.app-two-column-listing-grid .listing a { cursor:move;}
+
+.app-two-column-listing-grid .column {padding-bottom:15px;}
