@@ -40,11 +40,5 @@
   
 
   <div class="clearfix">&nbsp;</div>
-  
-  
-  <div class="functions">
-    <%= link_to_new_page "New #{f.object.data_path.blank? ? 'Page' : f.object.data_path.singularize.titleize}...", 
-          { :representing => f.object.data_path.blank? ? nil : f.object.data_path.singularize  }, { :class => 'button new-page' } %>
-  </div>
 
 <% end %>

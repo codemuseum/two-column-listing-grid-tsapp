@@ -1,6 +1,6 @@
 <%# Takes listing -%>
 <div class="listing urn-<%= listing.urn %>">
-  <a href="<%=h listing.url %>">
+  <a href="<%=h listing.url %>" class="listing-link">
     <div class="img"><%=image_tag listing.picture if listing.respond_to?(:picture) %></div>
     <div class="name"><%=h listing.name rescue 'unknown' %></div>
     <div class="description"><%=h listing.description  rescue 'unknown' %></div>
